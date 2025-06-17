@@ -8,4 +8,4 @@ def customFind(words, findSubStr):
     # or we can use simplest this method
     # return words.index(findSubStr)
 
-print(customFind('Look for the substring in the string', 'substring'))
+# print(customFind('Look for the substring in the string', 'substring'))
