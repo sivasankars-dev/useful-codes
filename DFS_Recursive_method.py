@@ -14,6 +14,18 @@ class Tree:
         for child in node.children:
             self.recursive(child)
 
+    def bfs(self, node):
+        toBeVisisted = [node]
+
+        while toBeVisisted:
+
+            visit = toBeVisisted.pop(0)
+
+            print(visit.data)
+
+            for child in visit.children:
+                toBeVisisted.append(child)
+
 tree = Tree()
 
 node1 = TreeNode(1)
@@ -28,3 +40,4 @@ node1.children = [node2, node3]
 node2.children = [node4, node5, node6]
 
 tree.recursive(node1)
+tree.bfs(node1)
