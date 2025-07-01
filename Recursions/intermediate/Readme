@@ -1,0 +1,10 @@
+# Learning Goals at Intermediate Level
+
+| Goal                            | Practice Problems                          |
+| ------------------------------- | ------------------------------------------ |
+| Backtracking                    | N-Queens, Sudoku, Palindrome Partition     |
+| Decision Trees (Yes/No choices) | Subsequences, Subset Sums, Stairs          |
+| State Management                | Rat in Maze, String Permutations           |
+| Recursive Tree Exploration      | K-th grammar, Count Ways, Subset Sums      |
+| Optimization                    | Add memoization (top-down DP) where needed |
+
