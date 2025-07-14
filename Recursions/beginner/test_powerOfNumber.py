@@ -1,13 +1,19 @@
+import pytest
 from powerOfNumber import powerOfNumber
 
-def test_powerOfNumber():
-    assert powerOfNumber(2, 0) == 1, "Test case 1 failed"
-    assert powerOfNumber(2, 1) == 2, "Test case 2 failed"
-    assert powerOfNumber(2, 2) == 4, "Test case 3 failed"
-    assert powerOfNumber(2, 3) == 8, "Test case 4 failed"
-    assert powerOfNumber(3, 3) == 27, "Test case 5 failed"
-    assert powerOfNumber(5, 0) == 1, "Test case 6 failed"
-    assert powerOfNumber(5, 1) == 5, "Test case 7 failed"
-    assert powerOfNumber(5, 2) == 25, "Test case 8 failed"
-    assert powerOfNumber(5, 5) == 3125, "Test case 9 failed"
+test_data = [   
+    (2, 0, 1),
+    (2, 1, 2),
+    (2, 2, 4),
+    (2, 3, 8),
+    (3, 3, 27),
+    (5, 0, 1),
+    (5, 1, 5),
+    (5, 2, 25),
+    (5, 5, 3125)
+]
+
+@pytest.mark.parametrize("base, exponent, expected", test_data)
+def test_powerOfNumber(base, exponent, expected):
+    assert powerOfNumber(base, exponent) == expected, f"Test case for base={base}, exponent={exponent} failed"
     print("All test cases passed!")
